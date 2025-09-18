@@ -9,5 +9,6 @@ class post extends Model
 {
 
     use HasFactory;
+
     //
 }
