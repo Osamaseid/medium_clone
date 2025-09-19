@@ -18,16 +18,13 @@ class PostFactory extends Factory
     {
         $title = fake()->sentence(3);
         return [
-            'title' => $title, // sentence of 3 words
-            'content' => fake()->paragraph(3), // 3 paragraphs
-            'user_id' => 1, // 1 is the id of the user
-            //'slug' => str()->slug($title), // slug of the title
-            'image' => fake()->imageUrl(640, 480, 'animals', true), // image url
-            'status' => 'published', // published or draft
-            'category_id' => 1, // 1 is the id of the category
-             
-
-            //
+            'title' => $title,
+            'content' => fake()->paragraph(3),
+            'user_id' => 1,
+            'slug' => str($title)->slug(),
+            'image' => fake()->imageUrl(640, 480, 'animals', true),
+            'published_at' => fake()->dateTimeBetween('-1 year', 'now'),
+            'category_id' => 1,
         ];
     }
 }

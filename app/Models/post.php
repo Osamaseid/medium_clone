@@ -14,7 +14,8 @@ class Post extends Model
         'content', 
         'user_id',
         'image',
-        'status',
+        'slug',
+        'published_at',
         'category_id'
     ];
 }
