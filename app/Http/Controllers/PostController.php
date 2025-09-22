@@ -15,10 +15,10 @@ class PostController extends Controller
     {
         //
         $categories = Category::get();
-        ($categories);
-
+        $posts = Post::orderByDesc()->get();
         return view ('dashboard', [
-            'categories'=> $categories
+            'categories'=> $categories,
+            'posts'=>$posts,
         ]);
     }
 
