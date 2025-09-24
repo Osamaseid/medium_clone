@@ -29,7 +29,7 @@
                 <div class="p-6 text-gray-900">
                     <div class="grid grid-cols-1 gap-6 py-4">
 
-                        @foreach ($posts as $post)
+                        @forelse ($posts as $post)
 
 
 
@@ -66,7 +66,11 @@
                                 </div>
                             </div>
 
-                        @endforeach
+                        @empty
+                            <div class="text-center text-gray-400 py-10">
+                                No post found.
+                            </div>
+                        @endforelse
                     </div>
 
                     {{ $posts->onEachSide(1)->links() }}
