@@ -8,12 +8,14 @@ use Illuminate\View\Component;
 
 class PostItem extends Component
 {
+    public $post;
+
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct($post)
     {
-        //
+        $this->post = $post;
     }
 
     /**
